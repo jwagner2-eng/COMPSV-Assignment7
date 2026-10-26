@@ -1,0 +1,14 @@
+DESIGN MEMO
+Doctor Reporting Tree & Emergency Queue
+
+Why a Tree Works for the Doctor Structure
+
+I think a binary tree is a good choice for representing the doctor reporting structure because it makes it easy to show how different doctors are connected. In a hospital, doctors may report to other doctors who have more responsibility. Using a tree allows us to organize those relationships in a way that is easy to understand. Each doctor can have a left and right connection, which allows the structure to grow as more doctors are added.
+
+When Different Tree Traversals Are Useful
+
+Preorder, inorder, and postorder traversals are useful because they allow us to go through the same tree in different orders depending on what we need. Preorder could be useful when we want to look at a manager before looking at the doctors who report to them. Inorder could help when we need to process the left side of a tree before the parent and then the right side. Postorder could be useful when we need to finish processing the doctors below a manager before processing the manager. Each method has a different purpose, even though they are working with the same information.
+
+How Heaps Help with Emergency Intake
+
+A min-heap is useful for an emergency intake system because patients should not always be treated in the order they arrive. Some patients need attention more urgently than others. In my program, patients with lower urgency numbers have higher priority. The heap makes it efficient to add patients and remove the most urgent patient while keeping the queue organized. This is important in real-time systems because priorities can change as new patients arrive.
